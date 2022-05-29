@@ -2,10 +2,14 @@
 {% extends "base.html" %}
 
 <!-- title of page -->
-{% block head_title %} Binh Le {% endblock %} 
+{% block head_title %}
+    {{ title }}
+{% endblock %} 
 
 <!-- personalize content of about page -->
 {% block content %} 
-<h1>Hi, my name is Binh!</h1>
-<p>I'm an aspiring software developer.</p>
+    <!-- retrieves heading and content from context dictionary in the 
+    about() view function and displays it -->
+    <h1>{{ heading }}</h1>
+    <p>{{ content }}</p>
 {% endblock %}
