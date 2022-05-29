@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
+
+
 # create view for about page, which is also the home page
 def about(request):
     title = "Binh Le"
@@ -14,6 +16,7 @@ def about(request):
     }
     return render(request, template, context)
 
+# create view for contact page
 def contact(request):
     title = "Contact"
     template = "contact.html"
