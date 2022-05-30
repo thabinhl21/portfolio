@@ -6,4 +6,7 @@ class Project(models.Model):
     description = models.TextField(null=True, blank=True)
     slug = models.SlugField(unique=True)    # a unique URL for each project
     tools = models.CharField(max_length=250)
-    # link = URLField(null=True)
+
+    def get_absolute_url(self):
+        return f"/projects/{self.slug}"
+
