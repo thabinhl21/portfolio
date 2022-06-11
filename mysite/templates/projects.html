@@ -9,10 +9,17 @@
     <h1>{{ title }}</h1>
 
     <!-- iterate through list of projects and display them -->
-    {% for item in project_list %}
-        <h2><a href="{{ item.get_absolute_url }}"></a>{{ item.name }}</h2>
-        <p>{{ item.description }}</p>
-        <p>{{ item.tools }}</p>
-    {% endfor %}
+    <div class="container">
+        <div class="row">
+            {% for item in project_list %}
+                <div class="col-sm">
+                    <h2>{{ item.name }}</h2>
+                    <p>{{ item.description }}</p>
+                    <br>
+                    <p>Tools used: {{ item.tools }}</p>
+                </div>
+            {% endfor %}
+        </div>
+      </div>
 
 {% endblock %}
