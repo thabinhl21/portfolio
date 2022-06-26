@@ -10,3 +10,11 @@ class Project(models.Model):
     def get_absolute_url(self):
         return f"/projects/{self.slug}"
 
+class Experience(models.Model):
+    name = models.CharField(max_length=150)
+    role = models.CharField(max_length=100, default="")
+    jobType = models.CharField(max_length=75, default="")
+    date = models.CharField(max_length = 100)
+    location = models.CharField(max_length=100, default="")
+    description = models.TextField(null=True, blank=True)
+
